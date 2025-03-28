@@ -8,7 +8,7 @@ func main() {
 	generateID := GenerateID()
 
 	for {
-		fmt.Println("\n Inventory Management System")
+		fmt.Println("\n Inventory Management System ....")
 		fmt.Println("1️ Add Product")
 		fmt.Println("2️ View Product")
 		fmt.Println("3️ Update Stock")
