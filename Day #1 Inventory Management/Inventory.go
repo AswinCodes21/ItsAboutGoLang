@@ -35,14 +35,15 @@ func GetProduct(id string) (*Product, error) {
 	}
 	return product, nil
 }
-
 func UpdateStock(id string, quantity int) error {
-	product, err := GetProduct(id)
-	if err != nil {
-		return err
+	product, exists := inventory[id]
+	if !exists {
+		return errors.New("Product not found")
 	}
+
 	product.Stock += quantity
-	fmt.Println("Stock updated successfully!")
+	inventory[id] = product
+	fmt.Println(" Stock updated successfully!")
 	return nil
 }
 
@@ -51,7 +52,7 @@ func DeleteProduct(id string) error {
 		return errors.New("Product not found")
 	}
 	delete(inventory, id)
-	fmt.Println("Product deleted successfully........")
+	fmt.Println("Product deleted successfully!")
 	return nil
 }
 
