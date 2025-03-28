@@ -9,12 +9,12 @@ func main() {
 
 	for {
 		fmt.Println("\n Inventory Management System ....")
-		fmt.Println("1️ Add Product")
-		fmt.Println("2️ View Product")
-		fmt.Println("3️ Update Stock")
-		fmt.Println("4️ Delete Product")
-		fmt.Println("5️ View All Products")
-		fmt.Println("6️ Exit")
+		fmt.Println("1 Add Product")
+		fmt.Println("2 View Product")
+		fmt.Println("3 Update Stock")
+		fmt.Println("4 Delete Product")
+		fmt.Println("5 View All Products")
+		fmt.Println("6 Exit")
 		fmt.Print(" Enter your choice: ")
 
 		var choice int
