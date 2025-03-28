@@ -55,15 +55,20 @@ func DeleteProduct(id string) error {
 	fmt.Println("Product deleted successfully!")
 	return nil
 }
-
 func DisplayInventory() {
 	if len(inventory) == 0 {
-		fmt.Println("ℹ️ Inventory is empty")
+		fmt.Println("Inventory is empty.")
 		return
 	}
-	fmt.Println("\n Inventory List:")
+
+	fmt.Println("\nInventory List:")
 	for _, product := range inventory {
-		fmt.Printf("ID: %s | Name: %s | Price: ₹%.2f | Stock: %d | Category: %d\n",
-			product.ID, product.Name, product.Price, product.Stock, product.Category)
+		fmt.Println("-------------------------------------------------")
+		fmt.Println("ID       :", product.ID)
+		fmt.Println("Name     :", product.Name)
+		fmt.Println("Price    : ₹", product.Price)
+		fmt.Println("Stock    :", product.Stock)
+		fmt.Println("Category :", product.Category)
 	}
+	fmt.Println("-------------------------------------------------")
 }
